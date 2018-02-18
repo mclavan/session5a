@@ -1,0 +1,43 @@
+'''
+import session5
+reload (session5)
+session5.gui()
+'''
+
+
+print 'Tag sesh'
+
+import pymel.core as pm 
+
+def gui():
+	
+	win_name = 'mecSession5_gui'
+	window_width = 200
+
+	window_exists = pm.windowPref('mecSession5_gui', exists=True)
+	if window_exists:
+		pm.windowPref(window_name, remove=True)
+		pm.deleteUI(window_name)
+
+
+
+	win_object = pm.window(win_name, width=window_width, height=400)
+
+	main_layout = pm.columnLayout()
+
+
+
+
+	pm.frameLayout(width=window_width, label='Something', collapsable=True)
+	row_width = window_width / 3
+	pm.rowColumnLayout(columnWidth=[[1, row_width] [2, row_width], [3, row_width]])
+	
+
+	pm.button (label='test1', width=window_width / 3)
+	pm.button (label='test1', width=window_width / 3)
+	pm.button (label='test1', width=window_width / 3)
+
+	#button_mania()
+	print 'reads thru'
+	win_object.show()
+  
