@@ -30,7 +30,7 @@ def gui():
 
 	pm.frameLayout(width=window_width, label='Something', collapsable=True)
 	row_width = window_width / 3
-	pm.rowColumnLayout(columnWidth=[[1, row_width] [2, row_width], [3, row_width]])
+	pm.rowColumnLayout(columnWidth=[[1, row_width], [2, row_width], [3, row_width]])
 	
 
 	pm.button (label='test1', width=window_width / 3)
